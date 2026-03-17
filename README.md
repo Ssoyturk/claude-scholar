@@ -14,11 +14,11 @@
   <strong>Language</strong>: <a href="README.md">English</a> | <a href="README.zh-CN.md">中文</a>
 </div>
 
-> Personal [Claude Code](https://github.com/anthropics/claude-code) / [Codex CLI](https://github.com/openai/codex) / [OpenCode](https://github.com/opencode-ai/opencode) configuration for academic research and software development — covering the full research lifecycle from ideation to publication.
+> Semi-automated research assistant for academic research and software development. Supports [Claude Code](https://github.com/anthropics/claude-code), [OpenCode](https://github.com/opencode-ai/opencode), and [Codex CLI](https://github.com/openai/codex) across ideation, coding, experiments, writing, and publication.
 
 ## News
 
-- **2026-03-15**: **Obsidian project knowledge base** — built-in official Obsidian skills + filesystem-first project import, conservative repo-bound auto-sync, default `Maps/literature.canvas`, optional `.base` views, and detach/archive/purge lifecycle (no MCP needed)
+- **2026-03-17**: **Obsidian project knowledge base** — built-in official Obsidian skills + filesystem-first project import, conservative repo-bound auto-sync, default `Maps/literature.canvas`, optional `.base` views, and detach/archive/purge lifecycle (no MCP needed)
 - **2026-02-26**: **Zotero MCP Web API mode** — remote access, import papers via DOI/arXiv ID/URL, collection management, item updates, safe deletion; config guides for [Claude Code](./MCP_SETUP.md), [Codex CLI](./MCP_SETUP.md#codex-cli), [OpenCode](./MCP_SETUP.md#opencode)
 - **2026-02-25**: **Codex CLI** support — added `codex` branch supporting [OpenAI Codex CLI](https://github.com/openai/codex) with config.toml, 40 skills, 14 agents, and sandbox security
 - **2026-02-23**: Added `setup.sh` installer — safe merge into existing `~/.claude`, auto-backup `settings.json`, smart hooks/mcpServers/plugins merge
@@ -38,7 +38,7 @@
 
 ## Introduction
 
-Claude Scholar is a personal configuration system for Claude Code CLI, providing rich skills, commands, agents, and hooks optimized for:
+Claude Scholar is a semi-automated research assistant for academic research and software development, providing rich skills, commands, agents, and hooks optimized for:
 - **Academic Research** - Complete research lifecycle: idea generation → experimentation → results analysis → paper writing → review response → conference preparation
 - **Software Development** - Git workflows, code review, test-driven development, ML project architecture
 - **Plugin Development** - Skill, Command, Agent, Hook development guides with quality assessment
@@ -312,7 +312,6 @@ claude-scholar/
 │   ├── obsidian-views.md        # Explicitly generate optional Views/*.base
 │   ├── zotero-review.md         # Read Zotero papers, generate literature review
 │   ├── zotero-notes.md          # Batch read Zotero papers, generate reading notes
-│   ├── zotero-audit.md          # Audit Zotero collection coverage and schema
 │   ├── analyze-results.md       # Analyze experiment results
 │   ├── rebuttal.md              # Generate systematic rebuttal document
 │   ├── presentation.md          # Create conference presentation outline
@@ -424,7 +423,6 @@ claude-scholar/
 | `/research-init` | Launch research startup workflow (5W1H, literature review, gap analysis) |
 | `/zotero-review` | Read papers from Zotero collection, synthesize into Obsidian literature review and downstream project notes |
 | `/zotero-notes` | Batch read Zotero papers, create/update detailed Obsidian paper notes and refresh `Maps/literature.canvas` |
-| `/zotero-audit` | Audit Zotero collection coverage, canonical paper-note mapping, and schema drift |
 | `/obsidian-ingest` | Ingest a new Markdown file or directory via classify -> promote / merge / stage-to-daily |
 | `/obsidian-note` | Archive, purge, or rename a single canonical note |
 | `/obsidian-views` | Explicitly generate optional `.base` views and extra canvases |
@@ -599,7 +597,6 @@ Optional views: explicit-only via `/obsidian-views`
 
 Main commands:
 
-- `/zotero-audit`
 - `/obsidian-init`
 - `/obsidian-ingest`
 - `/obsidian-sync`
@@ -653,7 +650,7 @@ Defined in `rules/experiment-reproducibility.md`:
 
 ## Contributing
 
-This is a personal configuration, but you're welcome to:
+This semi-automated research assistant is still highly customizable, and you're welcome to:
 - Fork and adapt for your own research
 - Submit issues for bugs
 - Suggest improvements via issues

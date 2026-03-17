@@ -14,11 +14,11 @@
   <strong>语言</strong>: <a href="README.md">English</a> | <a href="README.zh-CN.md">中文</a>
 </div>
 
-> 面向学术研究和软件开发的个人 [Claude Code](https://github.com/anthropics/claude-code) / [Codex CLI](https://github.com/openai/codex) / [OpenCode](https://github.com/opencode-ai/opencode) 配置仓库 — 覆盖从构思到发表的完整研究生命周期。
+> 面向学术研究和软件开发的半自动研究助手。支持 [Claude Code](https://github.com/anthropics/claude-code)、[OpenCode](https://github.com/opencode-ai/opencode) 和 [Codex CLI](https://github.com/openai/codex)，覆盖构思、编码、实验、写作与发表。
 
 ## News
 
-- **2026-03-15**: **Obsidian 项目知识库** — 内置官方 Obsidian skills + filesystem-first 项目导入，支持保守的已绑定仓库自动同步、默认 `Maps/literature.canvas`、显式触发的 `.base` 视图，以及 detach/archive/purge 生命周期（不需要 MCP）
+- **2026-03-17**: **Obsidian 项目知识库** — 内置官方 Obsidian skills + filesystem-first 项目导入，支持保守的已绑定仓库自动同步、默认 `Maps/literature.canvas`、显式触发的 `.base` 视图，以及 detach/archive/purge 生命周期（不需要 MCP）
 - **2026-02-26**: **Zotero MCP Web API 模式** — 支持远程访问，可通过 DOI/arXiv ID/URL 导入论文，进行集合管理、条目更新，安全删除；附 [Claude Code](./MCP_SETUP.zh-CN.md)、[Codex CLI](./MCP_SETUP.zh-CN.md#codex-cli)、[OpenCode](./MCP_SETUP.zh-CN.md#opencode) 三平台配置指南
 - **2026-02-25**: **Codex CLI** 支持 — 新增 `codex` 分支，支持 [OpenAI Codex CLI](https://github.com/openai/codex)，包含 config.toml、40 个 skills、14 个 agents 和 sandbox 安全机制
 - **2026-02-23**: 新增 `setup.sh` 安装脚本 — 安全合并到已有 `~/.claude`，自动备份 `settings.json`，智能合并 hooks/mcpServers/plugins
@@ -38,7 +38,7 @@
 
 ## 简介
 
-Claude Scholar 是一个面向 Claude Code CLI 的个人配置系统，提供丰富的技能、命令、代理和钩子，针对以下场景优化：
+Claude Scholar 是一个面向学术研究和软件开发的半自动研究助手，提供丰富的技能、命令、代理和钩子，针对以下场景优化：
 - **学术研究** - 完整的研究生命周期：想法生成 → 实验 → 结果分析 → 论文写作 → 审稿回复 → 会议准备
 - **软件开发** - Git 工作流、代码审查、测试驱动开发、ML 项目架构
 - **插件开发** - Skill、Command、Agent、Hook 开发指南与质量评估
@@ -312,7 +312,6 @@ claude-scholar/
 │   ├── obsidian-views.md        # 显式生成可选的 Views/*.base
 │   ├── zotero-review.md         # 从 Zotero 读取论文，生成文献综述
 │   ├── zotero-notes.md          # 批量阅读 Zotero 论文，生成阅读笔记
-│   ├── zotero-audit.md          # 审计 Zotero collection 覆盖与 schema
 │   ├── analyze-results.md       # 分析实验结果
 │   ├── rebuttal.md              # 生成系统化 rebuttal 文档
 │   ├── presentation.md          # 创建会议演讲大纲
@@ -424,7 +423,6 @@ claude-scholar/
 | `/research-init` | 启动研究启动工作流（5W1H、文献综述、Gap 分析） |
 | `/zotero-review` | 从 Zotero 集合读取论文，并综合到 Obsidian 文献综述与下游项目笔记 |
 | `/zotero-notes` | 批量阅读 Zotero 论文，创建/更新 Obsidian 详细阅读笔记并刷新 `Maps/literature.canvas` |
-| `/zotero-audit` | 审计 Zotero collection 覆盖率、canonical paper note 映射与 schema 漂移 |
 | `/obsidian-ingest` | 将新的 Markdown 文件或目录按 classify -> promote / merge / stage-to-daily 入库 |
 | `/obsidian-note` | 对单个 canonical note 执行 archive、purge 或 rename |
 | `/obsidian-views` | 显式生成可选的 `.base` 视图与额外 canvases |
@@ -601,7 +599,6 @@ Claude Scholar 现已内置 Obsidian 项目知识库，不需要 MCP。详见 [O
 
 主要命令：
 
-- `/zotero-audit`
 - `/obsidian-init`
 - `/obsidian-ingest`
 - `/obsidian-sync`
@@ -655,7 +652,7 @@ Claude Scholar 现已内置 Obsidian 项目知识库，不需要 MCP。详见 [O
 
 ## 贡献
 
-这是个人配置，但欢迎您：
+这个半自动研究助手仍然高度可定制，也欢迎您：
 - Fork 并适应您自己的研究
 - 通过 issue 提交错误
 - 通过 issue 建议改进

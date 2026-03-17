@@ -85,7 +85,6 @@ Research/{project-slug}/
 
 ## 主要命令
 
-- `/zotero-audit` — 审计 Zotero collection 与 canonical paper notes 的覆盖情况
 - `/obsidian-init` — 初始化或导入项目知识库
 - `/obsidian-ingest` — 将新的 Markdown 文件或目录按 classify -> promote / merge / stage-to-daily 入库
 - `/obsidian-sync` — 强制执行确定性的文件系统同步并刷新辅助 notes

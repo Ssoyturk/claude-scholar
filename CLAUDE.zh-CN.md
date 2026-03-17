@@ -2,9 +2,9 @@
 
 ## 项目概述
 
-**Claude Scholar** - 面向学术研究和软件开发的个人 Claude Code 配置系统
+**Claude Scholar** - 面向学术研究和软件开发的半自动研究助手
 
-**Mission**: 覆盖完整的学术研究生命周期（从构思到发表）和软件开发工作流，同时提供插件开发和项目管理能力。
+**Mission**: 支持 Claude Code、OpenCode 和 Codex CLI，覆盖构思、编码、实验、写作、发表，以及插件开发和项目管理。
 
 ---
 
@@ -175,7 +175,6 @@
 | `/research-init` | 启动 Zotero 集成研究构思工作流（自动建集合、导入论文、全文分析） |
 | `/zotero-review` | 从 Zotero 集合读取论文，并综合到 Obsidian 文献综述与下游项目笔记 |
 | `/zotero-notes` | 批量阅读 Zotero 论文，创建/更新 Obsidian 详细阅读笔记并刷新 `Maps/literature.canvas` |
-| `/zotero-audit` | 审计 Zotero collection 覆盖率、canonical paper note 映射与 schema 漂移 |
 | `/obsidian-init` | 为当前科研仓库初始化或导入 Obsidian 项目知识库 |
 | `/obsidian-ingest` | 将新的 Markdown 文件或目录按 classify -> promote / merge / stage-to-daily 入库 |
 | `/obsidian-review` | 从 Obsidian 项目笔记生成项目级文献综述 |

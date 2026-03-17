@@ -85,7 +85,6 @@ Each research repo gets a local binding under:
 
 ## Main commands
 
-- `/zotero-audit` — audit Zotero collection coverage against canonical paper notes
 - `/obsidian-init` — bootstrap or import a project knowledge base
 - `/obsidian-ingest` — ingest a new Markdown file or directory via classify -> promote / merge / stage-to-daily
 - `/obsidian-sync` — force deterministic filesystem sync and refresh helper notes

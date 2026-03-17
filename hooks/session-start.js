@@ -87,7 +87,7 @@ if (binding.bound) {
   if (binding.vaultRoot) {
     output += `  - Vault root: ${binding.vaultRoot}\n`;
   }
-  output += '  - Suggested commands: /obsidian-sync, /obsidian-note, /zotero-audit\n\n';
+  output += '  - Suggested commands: /obsidian-sync, /obsidian-note\n\n';
 } else if (researchCandidate.candidate) {
   output += '🧠 Obsidian project memory: research repo candidate\n';
   output += `  - Detected markers: ${researchCandidate.markers.join(', ')}\n`;

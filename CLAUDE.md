@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-**Claude Scholar** - Personal Claude Code configuration system for academic research and software development
+**Claude Scholar** - Semi-automated research assistant for academic research and software development
 
-**Mission**: Cover the complete academic research lifecycle (from ideation to publication) and software development workflows, with plugin development and project management capabilities.
+**Mission**: Support Claude Code, OpenCode, and Codex CLI across ideation, coding, experiments, writing, publication, plugin development, and project management.
 
 ---
 
@@ -175,7 +175,6 @@ Ideation → ML Development → Experiment Analysis → Paper Writing → Self-R
 | `/research-init` | Start Zotero-integrated research ideation workflow (auto-create collections, import papers, full-text analysis) |
 | `/zotero-review` | Read papers from Zotero collection, synthesize into Obsidian literature review and downstream project notes |
 | `/zotero-notes` | Batch read Zotero papers, create/update detailed Obsidian paper notes and refresh `Maps/literature.canvas` |
-| `/zotero-audit` | Audit Zotero collection coverage, canonical paper-note mapping, and schema drift |
 | `/obsidian-init` | Bootstrap or import an Obsidian project knowledge base for the current research repository |
 | `/obsidian-ingest` | Ingest a new Markdown file or directory via classify -> promote / merge / stage-to-daily |
 | `/obsidian-review` | Generate project-linked literature synthesis from Obsidian paper notes |
