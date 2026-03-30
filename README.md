@@ -122,6 +122,8 @@ The installer is **backup-aware and incremental-update friendly**:
 - preserves your existing `env`, model/provider settings, API keys, permissions, and current `mcpServers` values,
 - adds missing hook entries instead of replacing your entire hook set.
 
+**Important CLAUDE note**: if you already maintain your own `~/.claude/CLAUDE.md` or `~/.claude/CLAUDE.zh-CN.md`, review `~/.claude/CLAUDE.scholar.md` and `~/.claude/CLAUDE.zh-CN.scholar.md` after installation and manually merge the Claude Scholar sections you want into your own files. Do not assume the sidecar files are applied automatically.
+
 To update later:
 
 ```bash
@@ -148,7 +150,7 @@ cp -r /tmp/claude-scholar/skills/git-workflow ~/.claude/skills/
 cp -r /tmp/claude-scholar/skills/bug-detective ~/.claude/skills/
 ```
 
-**Post-install**: minimal/manual install does **not** auto-merge `settings.json`; copy only the hooks or MCP entries you want from `settings.json.template`.
+**Post-install**: minimal/manual install does **not** auto-merge `settings.json`; copy only the hooks or MCP entries you want from `settings.json.template`. If you already have your own `~/.claude/CLAUDE.md` or `~/.claude/CLAUDE.zh-CN.md`, also merge the relevant sections from this repo's Claude files into yours instead of blindly overwriting them.
 
 ### Option 3: Selective Installation
 
@@ -166,7 +168,7 @@ cp rules/coding-style.md ~/.claude/rules/
 cp rules/agents.md ~/.claude/rules/
 ```
 
-**Post-install**: selective/manual install does **not** auto-merge `settings.json`; copy only the hooks or MCP entries you actually want from `settings.json.template`.
+**Post-install**: selective/manual install does **not** auto-merge `settings.json`; copy only the hooks or MCP entries you actually want from `settings.json.template`. If you already have your own `~/.claude/CLAUDE.md` or `~/.claude/CLAUDE.zh-CN.md`, merge the relevant sections from this repo's Claude files into yours instead of blindly overwriting them.
 
 ## Platform Support
 
