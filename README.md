@@ -172,6 +172,29 @@ cp rules/agents.md ~/.claude/rules/
 
 **Post-install**: selective/manual install does **not** auto-merge `settings.json`; copy only the hooks or MCP entries you actually want from `settings.json.template`. If you already have your own `~/.claude/CLAUDE.md` or `~/.claude/CLAUDE.zh-CN.md`, merge the relevant sections from this repo's Claude files into yours instead of blindly overwriting them.
 
+### Option 4: Plugin Marketplace Installation
+
+**Step 1: Install the Plugin**
+
+```bash
+/plugin marketplace add Galaxy-Dawn/claude-scholar
+/plugin install claude-scholar@claude-scholar
+```
+
+This auto-loads all skills, commands, agents, and hooks.
+
+**Step 2: Install Rules (Required)**
+
+Claude Code plugins cannot distribute rules automatically. Install them manually:
+
+```bash
+git clone https://github.com/Galaxy-Dawn/claude-scholar.git /tmp/claude-scholar
+mkdir -p ~/.claude/rules
+cp /tmp/claude-scholar/rules/*.md ~/.claude/rules/
+```
+
+> **Note**: Plugin installation does not configure `settings.json` (MCP servers, env vars). If you need Zotero MCP or other integrations, see the [Integrations](#integrations) section for manual setup.
+
 ## Getting Started Scenarios
 
 After installation, the simplest way to begin is to describe your task in natural language. You do not need to memorize the whole system first. Below are a few realistic starting points.
@@ -223,7 +246,6 @@ or:
 - Start with one concrete task, not a vague request for "everything."
 - If you already maintain your own local `CLAUDE.md` files, merge the Claude Scholar sections you want into them instead of assuming sidecar files apply automatically.
 - Zotero and Obsidian are optional, but they become much more useful when you want durable literature notes or project memory rather than one-off chat output.
-
 
 ## Platform Support
 
